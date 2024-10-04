@@ -94,3 +94,195 @@
   cursor: pointer;
   width: 90px;
 }
+
+/* New Section CSS for Boxed Buttons */
+.buttons-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Space between the buttons section and amenities */
+}
+
+.box-button {
+  background-color: #4CAF50; /* Green color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 0 10px; /* Spacing between buttons */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.box-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+.contactdetailmodal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure modal is above other content */
+}
+
+.contactdetailmodal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left; /* Change to left alignment */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px; /* Set a fixed width for better layout */
+}
+
+.contactdetailmodal-content h2 {
+  margin-bottom: 10px;
+}
+
+.contactdetailmodal-content p {
+  margin: 5px 0;
+}
+
+
+.contactdetailmodal-content button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #4CAF50; /* Green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contactdetailmodal-content button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+/* Modal for Pricing */
+.pricingmodal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure modal is above other content */
+}
+
+.pricingmodal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px; /* Set a fixed width for better layout */
+}
+
+.price-chart {
+  margin-top: 15px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.striked-rate {
+  text-decoration: line-through;
+  color: gray; /* Color for struck out rates */
+}
+
+.offer-rate {
+  color: green; /* Color for offer rates */
+}
+
+.pricingmodal-content h2 {
+  margin-bottom: 10px;
+}
+
+.pricingmodal-content button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #4CAF50; /* Green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pricingmodal-content button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Buttons Section Style */
+.buttons-section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.box-button {
+  padding: 10px 20px;
+  background-color: #007BFF; /* Blue color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.box-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Pricing Section Style */
+.pricing-section {
+  margin-top: 20px;
+}
+
+.pricing-rectangle {
+  background-color: #f2f2f200; /* Light grey background */
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing-button {
+  padding: 10px 20px;
+  background-color: #28a745; /* Green color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: transparent;
+}
+
+.pricing-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.whatsapp-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-color: #25D366;
+}
+
+.whatsapp-icon {
+  font-size: 30px; /* Icon size */
+  color: white; /* WhatsApp color */
+}
+
+
+
