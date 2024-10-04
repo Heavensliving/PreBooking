@@ -38,7 +38,6 @@ const Home = () => {
     <>
       <div className="home-container">
         <div className="header">
-          <h1 className="logo">Heavens <span className='logoSub'>Living</span></h1>
           <h2 className="animated-text">Flora Inn</h2>
           <h3 className="animated-text">Booking Portal</h3>
         </div>
