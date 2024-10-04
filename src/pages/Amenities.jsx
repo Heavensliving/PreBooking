@@ -82,16 +82,13 @@ const Amenities = () => {
     setIsPricingModalOpen(false); // Close the pricing modal
   };
 
-  const handleGalleryClick = () => {
-    navigate('/florainndotheavens-adminpage'); // Navigate to the admin page
-  };
 
   return (
     <div className="amenities-container">
       {/* New Section with Boxed Buttons */}
       <div className="buttons-section">
         <button className="box-button" onClick={handleContactDetailsClick} style={{backgroundColor:"white",color:"#247a4d", fontWeight:"500"}}>Contact Details</button>
-        <button className="box-button" onClick={handleGalleryClick} style={{backgroundColor:"white",color:"#247a4d", fontWeight:"500"}}>Gallery</button> {/* Add onClick handler for Gallery */}
+        <button className="box-button" style={{backgroundColor:"white",color:"#247a4d", fontWeight:"500"}}>Gallery</button> {/* Add onClick handler for Gallery */}
         <button className="box-button" onClick={handlePricingClick} style={{backgroundColor:"white",color:"#247a4d", fontWeight:"500"}}>Pricing</button>
       </div>
 
