@@ -1,8 +1,6 @@
-// Home.js
 import React, { useState } from 'react';
 import './Home.css';
-import { FaPlus, FaQrcode, FaTimes, FaInfoCircle } from 'react-icons/fa'; // Import the icons
-import { FaWhatsapp } from 'react-icons/fa'; // Import WhatsApp icon
+import { FaPlus, FaQrcode, FaTimes, FaInfoCircle, FaWhatsapp } from 'react-icons/fa'; // Import icons
 import gpayImage from '../assets/Gpay.jpeg'; // Adjust the path based on your structure
 import PreBookForm from './PreBookForm'; // Import the PreBookForm
 import Amenities from './Amenities';
@@ -31,6 +29,10 @@ const Home = () => {
   const handleWhatsAppClick = () => {
     window.open('https://wa.me/yourwhatsappnumber', '_blank'); // Replace with your WhatsApp number
   };
+
+  // Platform detection for applying styles
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const whatsappButtonStyle = isIOS ? { bottom: '10px' } : { bottom: '20px' };
 
   return (
     <>
@@ -89,7 +91,7 @@ const Home = () => {
       </div>
 
       {/* WhatsApp Contact Button */}
-      <button className="whatsapp-button" onClick={handleWhatsAppClick}>
+      <button className="whatsapp-button" onClick={handleWhatsAppClick} style={whatsappButtonStyle}>
         <FaWhatsapp className="whatsapp-icon" />
       </button>
     </>
