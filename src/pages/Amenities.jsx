@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import {
   FaBed, FaVideo, FaWifi, FaTshirt, FaHamburger, FaWater, FaShieldAlt, FaMusic, FaFire, FaUsers, FaDumbbell,
   FaSpa, FaUtensils, FaCoffee, FaListAlt, FaBriefcase, FaLaptop, FaDoorOpen, FaPlug, FaGamepad, FaYinYang,
@@ -34,6 +35,7 @@ const amenitiesList = [
 
 const Amenities = () => {
   const gridRef = useRef(null);
+  const navigate = useNavigate(); // Initialize useNavigate hook
   const [isContactModalOpen, setIsContactModalOpen] = useState(false); // State for contact modal
   const [isPricingModalOpen, setIsPricingModalOpen] = useState(false); // State for pricing modal
 
@@ -80,12 +82,16 @@ const Amenities = () => {
     setIsPricingModalOpen(false); // Close the pricing modal
   };
 
+  const handleGalleryClick = () => {
+    navigate('/florainndotheavens-adminpage'); // Navigate to the admin page
+  };
+
   return (
     <div className="amenities-container">
       {/* New Section with Boxed Buttons */}
       <div className="buttons-section">
         <button className="box-button" onClick={handleContactDetailsClick} style={{backgroundColor:"white",color:"#247a4d", fontWeight:"500"}}>Contact Details</button>
-        <button className="box-button" style={{backgroundColor:"white",color:"#247a4d", fontWeight:"500"}}>Gallery</button>
+        <button className="box-button" onClick={handleGalleryClick} style={{backgroundColor:"white",color:"#247a4d", fontWeight:"500"}}>Gallery</button> {/* Add onClick handler for Gallery */}
         <button className="box-button" onClick={handlePricingClick} style={{backgroundColor:"white",color:"#247a4d", fontWeight:"500"}}>Pricing</button>
       </div>
 
@@ -116,39 +122,39 @@ const Amenities = () => {
       )}
 
       {/* Modal for Pricing */}
-{isPricingModalOpen && (
-  <div className="pricingmodal-overlay">
-    <div className="pricingmodal-content">
-      <h2>Our Pricing</h2>
-      <p style={{ fontWeight: 'bold', color: '#ff0000' }}>Early Bird Offer is going!</p>
-      <div className="price-chart">
-        <div className="price-row">
-          <span>4 Sharing:</span>
-          <span className="striked-rate">₹7500</span>
-          <span className="offer-rate">₹6500</span>
+      {isPricingModalOpen && (
+        <div className="pricingmodal-overlay">
+          <div className="pricingmodal-content">
+            <h2>Our Pricing</h2>
+            <p style={{ fontWeight: 'bold', color: '#ff0000' }}>Early Bird Offer is going!</p>
+            <div className="price-chart">
+              <div className="price-row">
+                <span>4 Sharing:</span>
+                <span className="striked-rate">₹7500</span>
+                <span className="offer-rate">₹6500</span>
+              </div>
+              <div className="price-row">
+                <span>3 Sharing:</span>
+                <span className="striked-rate">₹8500</span>
+                <span className="offer-rate">₹7000</span>
+              </div>
+              <div className="price-row">
+                <span>2 Sharing:</span>
+                <span className="striked-rate">₹9500</span>
+                <span className="offer-rate">₹8000</span>
+              </div>
+            </div>
+            <p style={{ marginTop: '20px' }}>
+              <strong>Note:</strong><br />
+              All deposits will be ₹3000.<br />
+              Refundable deposit: ₹1000.<br />
+              Pre-booking: ₹999 (non-refundable, will be reduced from your deposit).<br /><br></br>
+              <strong style={{ color: '#ff0000' }}>The offer amount is only for prebooking after that, it will change to the normal rate.</strong>
+            </p>
+            <button onClick={closePricingModal}>Close</button>
+          </div>
         </div>
-        <div className="price-row">
-          <span>3 Sharing:</span>
-          <span className="striked-rate">₹8500</span>
-          <span className="offer-rate">₹7000</span>
-        </div>
-        <div className="price-row">
-          <span>2 Sharing:</span>
-          <span className="striked-rate">₹9500</span>
-          <span className="offer-rate">₹8000</span>
-        </div>
-      </div>
-      <p style={{ marginTop: '20px' }}>
-        <strong>Note:</strong><br />
-        All deposits will be ₹3000.<br />
-        Refundable deposit: ₹1000.<br />
-        Pre-booking: ₹999 (non-refundable, will be reduced from your deposit).<br /><br></br>
-        <strong style={{ color: '#ff0000' }}>The offer amount is only for prebooking after that, it will change to the normal rate.</strong>
-      </p>
-      <button onClick={closePricingModal}>Close</button>
-    </div>
-  </div>
-)}
+      )}
 
       {/* New Section Below Amenities */}
       <div className="pricing-section">
