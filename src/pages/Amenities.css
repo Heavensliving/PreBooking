@@ -20,8 +20,6 @@
   scrollbar-width: thin; /* Optional: makes the scrollbar thinner */
 }
 
-
-
 .amenity-item {
   display: flex;
   flex-direction: column;
@@ -48,3 +46,50 @@
   color: white;
 }
 
+/* New Section CSS */
+.pricing-section {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-rectangle {
+  width: 400px;
+  height: 70px;
+  background-color: #f0f0f000;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.whatsapp-button {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 2rem;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 6px;
+  margin-left: 80px;
+}
+
+.whatsapp-icon {
+  margin-right: 10px;
+}
+
+.pricing-button {
+  background-color: #ffffff00;
+  color: #1f5e3e00;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 90px;
+}
