@@ -89,11 +89,6 @@ const Home = () => {
           </div>
         )}
       </div>
-
-      {/* WhatsApp Contact Button */}
-      <button className="whatsapp-button" onClick={handleWhatsAppClick} style={whatsappButtonStyle}>
-        <FaWhatsapp className="whatsapp-icon" />
-      </button>
     </>
   );
 };
