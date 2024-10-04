@@ -1,6 +1,6 @@
 body {
     position: relative; /* Required for absolute positioning of pseudo-element */
-    height: 100vh;
+    height: 110vh;
     margin: 0;
     font-family: 'Poppins', sans-serif; /* Apply the font globally */
     overflow: auto; /* Hide overflow if necessary */
@@ -262,7 +262,7 @@ h3.animated-text {
 .whatsapp-button {
     position: fixed;
     bottom: 120px; /* Position it from the bottom */
-    right: 70px; /* Position it from the right */
+    right: 50px; /* Position it from the right */
     height: 60px; /* Height of the button */
     width: 60px; /* Width of the button */
     background-color: #25D366; /* WhatsApp green color */
