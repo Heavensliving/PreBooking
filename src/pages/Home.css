@@ -1,0 +1,171 @@
+body {
+    position: relative; /* Required for absolute positioning of pseudo-element */
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Apply the font globally */
+    overflow: hidden; /* Hide overflow if necessary */
+    background: linear-gradient(to bottom, #247a4d, #0b2c24);
+}
+
+/* Background Image */
+body::before {
+    content: '';
+    position: absolute; /* Position relative to the body */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/bgimg.jpg') no-repeat center center; /* Change the path according to your project structure */
+    background-size: cover; /* Ensure the image covers the entire area */
+    opacity: 0.1; /* Adjust opacity as needed */
+    z-index: 0; /* Ensure it stays behind other content */
+    animation: moveBackground 30s linear infinite; /* Add animation */
+}
+
+/* Keyframes for the background moving effect */
+@keyframes moveBackground {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Set a linear gradient with a lighter blue and violet */
+.header {
+    position: absolute;
+    top: 20px; /* Adjust the value to control how close it is to the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
+    text-align: center;
+    z-index: 1;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logo .logoSub {
+    font-weight: 300;
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+/* Styling and animation for the animated text */
+.animated-text {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px 0;
+    text-align: center; /* Center the text */
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* For Flora Inn (larger and bold) */
+h2.animated-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* For Booking Portal (slightly smaller) */
+h3.animated-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+
+.prebook-button {
+    position: absolute;
+    height: 60px;
+    bottom: 80px; /* Adjust this value to position the button */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    background-color: #247a4d; /* Background color of the button */
+    color: white; /* Text color */
+    font-family: 'Poppins', sans-serif; /* Font family */
+    font-weight: 400;
+    font-size: 1rem; /* Font size */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Round corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+}
+
+.prebook-button:hover {
+    background-color: #1f5e3d; /* Darker background color on hover */
+    color: white; /* Text color on hover */
+}
+
+.add-icon {
+    margin-right: 8px; /* Space between icon and text */
+    vertical-align: middle; /* Align the icon with the text */
+}
+
+.qr-button {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    bottom: 80px; /* Align with the prebook button */
+    left: calc(50% + 100px); /* Position next to the prebook button (adjust as needed) */
+    background-color: white; /* Background color of the QR button */
+    color: #247a4d; /* Text color */
+    font-family: 'Poppins', sans-serif; /* Font family */
+    font-weight: 400;
+    font-size: 1.5rem; /* Font size */
+    padding: 10px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 50px; /* Round corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+}
+
+.qr-button:hover {
+    background-color: #e6e6e6; /* Light background color on hover */
+    color: #247a4d; /* Text color on hover */
+}
+
+.qr-icon {
+    margin: 0; /* Space adjustments */
+    vertical-align: middle; /* Align the icon with the text */
+}
+
+.qr-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000; /* Ensure it is above other elements */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 20px; /* Space around the image */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    width: 80%; /* Set width to 80% of the viewport width */
+    height: 60%; /* Set height to 60% of the viewport height */
+    max-width: 600px; /* Optional: maximum width */
+    max-height: 400px; /* Optional: maximum height */
+    overflow: auto; /* Enable scrolling if content overflows */
+}
+
+
+.qr-code-image {
+    max-width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+}
+

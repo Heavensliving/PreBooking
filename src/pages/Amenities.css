@@ -1,0 +1,46 @@
+/* Amenities.css */
+.amenities-container {
+    text-align: center;
+    position: absolute;
+    top: 180px;
+    margin: 10px;
+  }
+  
+  .amenities-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, .5fr); 
+    gap: .5rem;
+    justify-items: center;
+  }
+  
+  .amenity-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .amenity-icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .amenity-text {
+    margin-top: 0.75rem;
+    font-size: .8rem;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+  }
+  

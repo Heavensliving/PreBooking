@@ -1,0 +1,61 @@
+/* PreBookForm.css */
+.form-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure it is above other elements */
+    background-color: rgb(255, 255, 255); /* Slightly transparent background */
+    padding: 20px; /* Space around the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    width: 80%; /* Set width to 80% of the viewport width */
+    max-width: 600px; /* Optional: maximum width */
+    overflow: auto; /* Enable scrolling if content overflows */
+}
+
+.form-modal h3 {
+    margin-bottom: 20px;
+}
+
+.form-modal label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-modal input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Add margin for buttons and adjust layout */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 20px; /* Space between inputs and buttons */
+}
+
+.form-modal button {
+    padding: 10px 20px;
+    background-color: #247a4d; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 10px; /* Space between buttons */
+}
+
+.form-modal button.close-button {
+    background-color: red; /* Red background for Close button */
+}
+
+.form-modal button:hover {
+    background-color: #1f5e3d; /* Darker background color on hover */
+}
+
+.form-modal button.close-button:hover {
+    background-color: darkred; /* Darker red on hover */
+}
