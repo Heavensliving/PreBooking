@@ -38,7 +38,7 @@ body::before {
 /* Set a linear gradient with a lighter blue and violet */
 .header {
     position: absolute;
-    top: 15px; /* Adjust the value to control how close it is to the top */
+    top: 20px; /* Adjust the value to control how close it is to the top */
     left: 50%;
     transform: translateX(-50%); /* Center it horizontally */
     text-align: center;
@@ -87,11 +87,53 @@ h3.animated-text {
     font-weight: 400;
 }
 
+.info-button {
+    position: absolute; /* Position relative to the prebook button */
+    height: 60px;
+    width: 60px;
+    bottom: 60px; /* Align with the prebook button */
+    left: calc(50% - 180px); /* Position next to the prebook button (adjust as needed) */
+    background-color: transparent; /* Background color of the info button */
+    color: #d0ff00; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Round corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Transition effects */
+}
+
+.info-button:hover {
+    background-color: #e6e6e6; /* Light background color on hover */
+}
+
+.info-icon {
+    font-size: 2rem; /* Icon size */
+    margin: 0; /* Space adjustments */
+}
+
+/* Animation for warning */
+@keyframes warning-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animated-warning {
+    animation: warning-animation 1s infinite; /* Animate infinitely */
+}
+
+
 
 .prebook-button {
     position: absolute;
     height: 60px;
-    bottom: 80px; /* Adjust this value to position the button */
+    bottom: 60px; /* Adjust this value to position the button */
     left: 50%;
     transform: translateX(-50%); /* Center the button horizontally */
     background-color: #247a4d; /* Background color of the button */
@@ -121,7 +163,7 @@ h3.animated-text {
     position: absolute;
     height: 60px;
     width: 60px;
-    bottom: 80px; /* Align with the prebook button */
+    bottom: 60px; /* Align with the prebook button */
     left: calc(50% + 100px); /* Position next to the prebook button (adjust as needed) */
     background-color: white; /* Background color of the QR button */
     color: #247a4d; /* Text color */
@@ -151,7 +193,7 @@ h3.animated-text {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2000; /* Ensure it is above other elements */
+    z-index: 2; /* Ensure it is above other elements */
     background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
     padding: 20px; /* Space around the image */
     border-radius: 10px; /* Rounded corners */
