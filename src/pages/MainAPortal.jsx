@@ -16,11 +16,11 @@ const MainAPortal = () => {
     const fetchData = async () => {
       try {
         // Fetch total bookings
-        const bookingsResponse = await fetch('http://localhost:5000/api/prebook/count');
+        const bookingsResponse = await fetch('https://prebookingb.onrender.com/api/prebook/count');
         const bookingsData = await bookingsResponse.json();
 
         // Fetch custom payment total
-        const customPaymentResponse = await fetch('http://localhost:5000/api/prebook/custom-payment-sum');
+        const customPaymentResponse = await fetch('https://prebookingb.onrender.com/api/prebook/custom-payment-sum');
         const customPaymentData = await customPaymentResponse.json();
 
         const preBookedAmount = bookingsData.totalBookings * 999;
@@ -36,7 +36,7 @@ const MainAPortal = () => {
         }));
 
         // Fetch pre-book details
-        const preBookResponse = await fetch('http://localhost:5000/api/prebook/all');
+        const preBookResponse = await fetch('https://prebookingb.onrender.com/api/prebook/all');
         const preBookData = await preBookResponse.json();
         setPreBookDetails(preBookData);
       } catch (error) {
