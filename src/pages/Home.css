@@ -91,6 +91,7 @@ h3.animated-text {
     position: absolute; /* Position relative to the prebook button */
     height: 60px;
     width: 60px;
+    bottom: 25px;
     left: calc(50% - 180px); /* Position next to the prebook button (adjust as needed) */
     background-color: transparent; /* Background color of the info button */
     color: #d0ff00; /* Text color */
@@ -171,6 +172,7 @@ h3.animated-text {
     position: absolute;
     height: 60px;
     left: 50%;
+    bottom: 25px;
     transform: translateX(-50%); /* Center the button horizontally */
     background-color: #247a4d; /* Background color of the button */
     color: white; /* Text color */
@@ -199,6 +201,7 @@ h3.animated-text {
     position: absolute;
     height: 60px;
     width: 60px;
+    bottom: 25px;
     left: calc(50% + 100px); /* Position next to the prebook button (adjust as needed) */
     background-color: white; /* Background color of the QR button */
     color: #247a4d; /* Text color */
