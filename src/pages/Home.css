@@ -38,7 +38,7 @@ body::before {
 /* Set a linear gradient with a lighter blue and violet */
 .header {
     position: absolute;
-    top: 20px; /* Adjust the value to control how close it is to the top */
+    top: 15px; /* Adjust the value to control how close it is to the top */
     left: 50%;
     transform: translateX(-50%); /* Center it horizontally */
     text-align: center;
