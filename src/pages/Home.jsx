@@ -32,7 +32,7 @@ const Home = () => {
 
   // Platform detection for applying styles
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  const whatsappButtonStyle = isIOS ? { bottom: '40px' } : { bottom: '60px' };
+  const whatsappButtonStyle = isIOS ? { bottom: '80px' } : { bottom: '90px' };
 
   return (
     <>
