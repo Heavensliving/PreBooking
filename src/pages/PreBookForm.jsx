@@ -23,7 +23,7 @@ const PreBookForm = ({ onClose }) => {
     e.preventDefault();
   
     try {
-      const response = await fetch('http://localhost:5000/api/prebook', {
+      const response = await fetch('https://prebookingb.onrender.com/api/prebook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
