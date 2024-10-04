@@ -23,12 +23,13 @@
     margin-bottom: 10px;
 }
 
-.form-modal input {
+.form-modal input, .form-modal textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px; /* Prevent zooming on iOS */
 }
 
 /* Add margin for buttons and adjust layout */
