@@ -91,7 +91,6 @@ h3.animated-text {
     position: absolute; /* Position relative to the prebook button */
     height: 60px;
     width: 60px;
-    bottom: 10px; /* Align with the prebook button */
     left: calc(50% - 180px); /* Position next to the prebook button (adjust as needed) */
     background-color: transparent; /* Background color of the info button */
     color: #d0ff00; /* Text color */
@@ -124,12 +123,9 @@ h3.animated-text {
     animation: warning-animation 1s infinite; /* Animate infinitely */
 }
 
-
-
 .prebook-button {
     position: absolute;
     height: 60px;
-    bottom: 10px; /* Adjust this value to position the button */
     left: 50%;
     transform: translateX(-50%); /* Center the button horizontally */
     background-color: #247a4d; /* Background color of the button */
@@ -159,7 +155,6 @@ h3.animated-text {
     position: absolute;
     height: 60px;
     width: 60px;
-    bottom: 10px; /* Align with the prebook button */
     left: calc(50% + 100px); /* Position next to the prebook button (adjust as needed) */
     background-color: white; /* Background color of the QR button */
     color: #247a4d; /* Text color */
@@ -201,9 +196,22 @@ h3.animated-text {
     overflow: auto; /* Enable scrolling if content overflows */
 }
 
-
 .qr-code-image {
     max-width: 100%; /* Responsive width */
     height: auto; /* Maintain aspect ratio */
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    /* For iOS */
+    .prebook-button, .info-button, .qr-button {
+        bottom: 30px; /* Position 30px from the bottom for iOS */
+    }
+}
+
+@media (min-width: 769px) {
+    /* For Android */
+    .prebook-button, .info-button, .qr-button {
+        bottom: 40px; /* Position 40px from the bottom for Android */
+    }
+}
