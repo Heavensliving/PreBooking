@@ -102,10 +102,6 @@ h3.animated-text {
     transition: background-color 0.3s ease; /* Transition effects */
 }
 
-.info-button:hover {
-    background-color: #e6e6e6; /* Light background color on hover */
-}
-
 .info-icon {
     font-size: 2rem; /* Icon size */
     margin: 0; /* Space adjustments */
