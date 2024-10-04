@@ -1,6 +1,6 @@
 body {
     position: relative; /* Required for absolute positioning of pseudo-element */
-    height: 110vh;
+    height: 100vh;
     margin: 0;
     font-family: 'Poppins', sans-serif; /* Apply the font globally */
     overflow: auto; /* Hide overflow if necessary */
@@ -258,27 +258,5 @@ h3.animated-text {
     .prebook-button, .info-button, .qr-button {
         bottom: 40px; /* Position 40px from the bottom for Android */
     }
-}
-.whatsapp-button {
-    position: fixed;
-    bottom: 120px; /* Position it from the bottom */
-    right: 50px; /* Position it from the right */
-    height: 60px; /* Height of the button */
-    width: 60px; /* Width of the button */
-    background-color: #25D366; /* WhatsApp green color */
-    color: white; /* Icon color */
-    border: none; /* Remove default border */
-    border-radius: 50%; /* Round corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-    cursor: pointer; /* Pointer cursor on hover */
-    display: flex; /* Use flexbox to center the icon */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    transition: background-color 0.3s ease; /* Transition effects */
-    z-index: 2; /* Ensure it stays above other content */
-}
-
-.whatsapp-icon {
-    font-size: 1.9rem; /* Icon size */
 }
 
