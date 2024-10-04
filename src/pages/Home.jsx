@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Home.css';
 import { FaPlus, FaQrcode, FaTimes, FaInfoCircle, FaWhatsapp } from 'react-icons/fa'; // Import icons
 import gpayImage from '../assets/Gpay.jpeg'; // Adjust the path based on your structure
 import PreBookForm from './PreBookForm'; // Import the PreBookForm
 import Amenities from './Amenities';
+import { useNavigate } from 'react-router-dom'; // To handle navigation
 
 const Home = () => {
   const [isQrVisible, setQrVisible] = useState(false);
   const [isFormVisible, setFormVisible] = useState(false); // State for form visibility
   const [isModalOpen, setModalOpen] = useState(false); // State for modal visibility
+  const navigate = useNavigate(); // For navigation
+  const longPressTimeout = useRef(null); // Ref to track the timeout
 
   const handleQrClick = () => {
     setQrVisible(!isQrVisible);
@@ -30,15 +33,31 @@ const Home = () => {
     window.open('https://wa.me/yourwhatsappnumber', '_blank'); // Replace with your WhatsApp number
   };
 
-  // Platform detection for applying styles
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-  const whatsappButtonStyle = isIOS ? { bottom: '80px' } : { bottom: '90px' };
+  // Long press logic for navigating to admin page
+  const startLongPress = () => {
+    longPressTimeout.current = setTimeout(() => {
+      navigate('/florainndotheavens-adminpage');
+    }, 6000); // 6000 ms = 6 seconds
+  };
+
+  const endLongPress = () => {
+    clearTimeout(longPressTimeout.current);
+  };
 
   return (
     <>
       <div className="home-container">
         <div className="header">
-          <h2 className="animated-text">Flora Inn</h2>
+          {/* Long press detection on "Flora Inn" */}
+          <h2 
+            className="animated-text" 
+            onMouseDown={startLongPress} 
+            onMouseUp={endLongPress} 
+            onTouchStart={startLongPress} 
+            onTouchEnd={endLongPress}
+          >
+            Flora Inn
+          </h2>
           <h3 className="animated-text">Booking Portal</h3>
         </div>
       </div>
