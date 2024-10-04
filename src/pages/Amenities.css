@@ -1,7 +1,7 @@
 .amenities-container {
   text-align: center;
   position: absolute;
-  top: 180px;
+  top: 160px;
   margin: 10px;
 }
 
@@ -15,7 +15,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
   justify-items: center;
-  max-height: 400px; /* Adjust as needed */
+  max-height: 300px; /* Adjust as needed */
   overflow-y: auto; /* Allow scrolling manually */
   scrollbar-width: thin; /* Optional: makes the scrollbar thinner */
 }
