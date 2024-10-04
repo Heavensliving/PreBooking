@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import { FaBed, FaVideo, FaWifi, FaTshirt, FaHamburger, FaWater, FaShieldAlt, FaMusic, FaFire, FaUsers, FaDumbbell, FaSpa, FaUtensils, FaCoffee, FaListAlt, FaBriefcase, FaLaptop } from 'react-icons/fa';
-import { FaDoorOpen, FaPlug } from 'react-icons/fa'; // Import new icons for the additional amenities
-import { FaGamepad, FaYinYang, FaThLarge, FaGlassCheers } from 'react-icons/fa'; // Add icons for new amenities
+import {
+  FaBed, FaVideo, FaWifi, FaTshirt, FaHamburger, FaWater, FaShieldAlt, FaMusic, FaFire, FaUsers, FaDumbbell,
+  FaSpa, FaUtensils, FaCoffee, FaListAlt, FaBriefcase, FaLaptop, FaDoorOpen, FaPlug, FaGamepad, FaYinYang,
+  FaThLarge, FaGlassCheers, FaWhatsapp
+} from 'react-icons/fa'; // Importing WhatsApp icon as well
 import './Amenities.css';
 
 const amenitiesList = [
@@ -18,13 +20,13 @@ const amenitiesList = [
   { icon: <FaDumbbell />, text: 'Gym' },
   { icon: <FaSpa />, text: 'Meditation Area' },
   { icon: <FaUtensils />, text: 'AC Dining Hall' },
-  { icon: <FaDoorOpen />, text: 'Smoking Room' }, // New amenity
-  { icon: <FaDoorOpen />, text: '24/7 Gate Open' }, // New amenity
-  { icon: <FaPlug />, text: 'Power Backup' }, // New amenity
-  { icon: <FaGamepad />, text: 'Games Area' }, // New amenity
-  { icon: <FaYinYang />, text: 'Yoga Area' }, // New amenity
-  { icon: <FaThLarge />, text: 'Customized Rooms' }, // New amenity
-  { icon: <FaGlassCheers />, text: 'Unlimited Juice' }, // New amenity
+  { icon: <FaDoorOpen />, text: 'Smoking Room' },
+  { icon: <FaDoorOpen />, text: '24/7 Gate Open' },
+  { icon: <FaPlug />, text: 'Power Backup' },
+  { icon: <FaGamepad />, text: 'Games Area' },
+  { icon: <FaYinYang />, text: 'Yoga Area' },
+  { icon: <FaThLarge />, text: 'Customized Rooms' },
+  { icon: <FaGlassCheers />, text: 'Unlimited Juice' },
   { icon: <FaCoffee />, text: 'Coffee Vending Machine' },
   { icon: <FaListAlt />, text: 'Customized Food Menu' },
   { icon: <FaBriefcase />, text: 'Conference Room' },
@@ -72,6 +74,16 @@ const Amenities = () => {
             <p className="amenity-text">{amenity.text}</p>
           </div>
         ))}
+      </div>
+
+      {/* New Section Below Amenities */}
+      <div className="pricing-section">
+        <div className="pricing-rectangle">
+        <button className="pricing-button">Pricing</button>
+          <button className="whatsapp-button">
+            <FaWhatsapp className="whatsapp-icon" />
+          </button>
+        </div>
       </div>
     </div>
   );
