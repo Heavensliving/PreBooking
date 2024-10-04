@@ -15,7 +15,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
   justify-items: center;
-  max-height: 300px; /* Adjust as needed */
+  max-height: 350px; /* Adjust as needed */
   overflow-y: auto; /* Allow scrolling manually */
   scrollbar-width: thin; /* Optional: makes the scrollbar thinner */
 }
