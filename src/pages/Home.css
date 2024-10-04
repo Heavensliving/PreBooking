@@ -106,6 +106,14 @@ h3.animated-text {
     margin: 0; /* Space adjustments */
 }
 
+.help-text {
+    margin-left: 2px; /* Adjust the spacing as needed */
+    color: #d0ff00; /* Color to match the info icon */
+    font-size: .9rem; /* Font size for the help text */
+    vertical-align: middle; /* Align with the icon */
+}
+
+
 /* Animation for warning */
 @keyframes warning-animation {
     0% {
@@ -122,6 +130,42 @@ h3.animated-text {
 .animated-warning {
     animation: warning-animation 1s infinite; /* Animate infinitely */
 }
+
+.howtobookmodal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensure it is above other elements */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 20px; /* Space around the content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    width: 80%; /* Set width to 80% of the viewport width */
+    max-width: 600px; /* Optional: maximum width */
+    overflow: auto; /* Enable scrolling if content overflows */
+    text-align: left; /* Left-align content */
+}
+
+.howtobookmodal-content {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+}
+
+.step {
+    margin-bottom: 10px; /* Space after each step */
+}
+
+.howtobookclosebtn {
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(221, 12, 12);
+    color: white;
+    font-size: 16px;
+}
+
 
 .prebook-button {
     position: absolute;
@@ -215,3 +259,26 @@ h3.animated-text {
         bottom: 40px; /* Position 40px from the bottom for Android */
     }
 }
+.whatsapp-button {
+    position: fixed;
+    bottom: 120px; /* Position it from the bottom */
+    right: 70px; /* Position it from the right */
+    height: 60px; /* Height of the button */
+    width: 60px; /* Width of the button */
+    background-color: #25D366; /* WhatsApp green color */
+    color: white; /* Icon color */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Round corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Use flexbox to center the icon */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    transition: background-color 0.3s ease; /* Transition effects */
+    z-index: 2; /* Ensure it stays above other content */
+}
+
+.whatsapp-icon {
+    font-size: 1.9rem; /* Icon size */
+}
+
