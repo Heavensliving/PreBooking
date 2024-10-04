@@ -3,7 +3,7 @@ body {
     height: 100vh;
     margin: 0;
     font-family: 'Poppins', sans-serif; /* Apply the font globally */
-    overflow: hidden; /* Hide overflow if necessary */
+    overflow: auto; /* Hide overflow if necessary */
     background: linear-gradient(to bottom, #247a4d, #0b2c24);
 }
 
