@@ -54,13 +54,14 @@
 }
 
 .pricing-rectangle {
-  width: 400px;
+  width: 300px;
   height: 70px;
   background-color: #f0f0f000;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 12px;
   
 }
 
